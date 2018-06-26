@@ -4,7 +4,8 @@
                        [collection-check.core :refer :all]
                        [clojure.test.check.generators :as gen]]
                 :cljs [[cljs.test :refer-macros [is are testing deftest run-tests]]])
-            #?(:cljs [cljs.reader :refer [read-string]])))
+            #?(:cljs [cljs.reader :refer [read-string]]))
+  #?(:clj (import (java.util Map))))
 
 #?(:clj
    (deftest check
